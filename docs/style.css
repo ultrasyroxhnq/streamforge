@@ -1,0 +1,137 @@
+/* Stream Forge — feuille de style commune aux trois pages. */
+
+:root {
+  --fond: #0e1014;
+  --carte: #161a21;
+  --bordure: #262c36;
+  --texte: #e6e9ef;
+  --texte-doux: #a0a8b8;
+  --accent: #7c5cff;
+  --accent-clair: #9d86ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 16px;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.65;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 0 80px;
+}
+
+header.titre {
+  border-bottom: 1px solid var(--bordure);
+  padding-bottom: 28px;
+  margin-bottom: 36px;
+}
+
+.marque {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent-clair);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.2;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 40px 0 12px;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 26px 0 8px;
+  color: var(--accent-clair);
+}
+
+p, li { color: var(--texte-doux); }
+li { margin-bottom: 6px; }
+
+strong { color: var(--texte); font-weight: 600; }
+
+a { color: var(--accent-clair); }
+
+.chapo {
+  font-size: 18px;
+  color: var(--texte);
+}
+
+.carte {
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+.liens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.liens a {
+  display: inline-block;
+  padding: 11px 18px;
+  border: 1px solid var(--bordure);
+  border-radius: 9px;
+  text-decoration: none;
+  color: var(--texte);
+  font-size: 15px;
+  background: var(--carte);
+}
+
+.liens a.primaire {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--bordure);
+  font-size: 14px;
+  color: var(--texte-doux);
+}
+
+footer a { margin-right: 16px; }
+
+.maj {
+  font-size: 14px;
+  color: var(--texte-doux);
+  margin-top: -4px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --fond: #ffffff;
+    --carte: #f6f7f9;
+    --bordure: #e2e5ea;
+    --texte: #14171c;
+    --texte-doux: #4b5260;
+    --accent: #5b3ce0;
+    --accent-clair: #4a2fc4;
+  }
+}
